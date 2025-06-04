@@ -1,0 +1,39 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f7f4;
+}
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40vh;
+  max-height: 400px;
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+}
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: 0.45rem;
+  top: 0.5rem;
+  width: 2px;
+  height: 100%;
+  background-color: #d1d5db;
+}
+.timeline-item:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 9999px;
+  background-color: #f8f7f4;
+  border: 2px solid #374151;
+  z-index: 10;
+}

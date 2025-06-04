@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laporan Interaktif: KERIS & KUANTUM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+<header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <h1 class="text-xl md:text-2xl font-bold text-gray-900">KERIS & KUANTUM</h1>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#profil" class="nav-link font-medium text-gray-600 pb-1">Profil Pasukan</a>
+        <a href="#timeline" class="nav-link font-medium text-gray-600 pb-1">Garis Masa Misi</a>
+        <a href="#ancaman" class="nav-link font-medium text-gray-600 pb-1">Analisis Ancaman</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="container mx-auto p-4 sm:p-6 lg:p-8">
+  <section id="pengenalan" class="text-center mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Analisis Misi: Operasi Mutiara Hitam</h2>
+    <p class="max-w-3xl mx-auto text-gray-600">Dossier ini menyediakan analisis komprehensif mengenai penubuhan pasukan elit 'PAHLAWAN 5' dan misi sulung mereka di Pulau Naga Besi.</p>
+  </section>
+  <section id="profil" class="mb-20 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Profil Pasukan: PAHLAWAN 5</h2>
+    <div class="text-center mb-8">
+      <p class="text-gray-600">Pilih anggota untuk memaparkan profil dan analisis kemahiran mereka.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10" id="hero-selector">
+      <button data-hero-id="tuah" class="hero-btn px-4 py-2 rounded-full font-medium bg-white shadow-sm transition hover:bg-gray-200 active">Tuah Iskandar</button>
+      <button data-hero-id="jebat" class="hero-btn px-4 py-2 rounded-full font-medium bg-white shadow-sm transition hover:bg-gray-200">Jebat Adam</button>
+      <button data-hero-id="kasturi" class="hero-btn px-4 py-2 rounded-full font-medium bg-white shadow-sm transition hover:bg-gray-200">Kasturi Ariana</button>
+      <button data-hero-id="lekir" class="hero-btn px-4 py-2 rounded-full font-medium bg-white shadow-sm transition hover:bg-gray-200">Lekir Hakimi</button>
+      <button data-hero-id="lekiu" class="hero-btn px-4 py-2 rounded-full font-medium bg-white shadow-sm transition hover:bg-gray-200">Lekiu Zulkarnain</button>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+      <div class="text-center lg:text-left">
+        <img id="hero-image" src="assets/images/tuah.jpg" alt="Profil Pahlawan" class="w-48 h-48 mx-auto lg:mx-0 rounded-full object-cover shadow-md mb-6 ring-4 ring-white/50">
+        <h3 id="hero-name" class="text-3xl font-bold text-gray-900">Tuah Iskandar</h3>
+        <p id="hero-title" class="text-lg text-blue-800 font-medium mb-4">Ketua Pasukan & Pakar Strategi Siber</p>
+        <p id="hero-desc" class="text-gray-600 mb-6">...</p>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <h4 class="font-bold text-gray-700 mb-2">Senjata Warisan Hibrid:</h4>
+          <p id="hero-weapon" class="text-gray-800">...</p>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-center mb-4 text-gray-900">Analisis Spektrum Kemahiran</h4>
+        <div class="chart-container">
+          <canvas id="heroChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="mb-20 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Garis Masa Misi</h2>
+    <div class="max-w-3xl mx-auto">
+      <div id="mission-timeline-container" class="relative"></div>
+    </div>
+  </section>
+
+  <section id="ancaman" class="scroll-mt-20">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Analisis Ancaman</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Kad maklumat ancaman akan ditambah -->
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
